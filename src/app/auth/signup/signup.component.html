@@ -25,6 +25,15 @@
       <mat-hint align="end">{{ pwInput.value?.length }} / 4</mat-hint>
       <mat-error>Password has to be at least 4 characters long</mat-error>
     </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Your Date of Birth"
+        [matDatepicker]="picker"
+        [max]="maxDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
     <button type="submit" mat-raised-button color="primary">Submit</button>
   </form>
 </section>
